@@ -15,3 +15,10 @@ Route::get('/loginadmin', function () {
 });
 
 
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\HomeController;
+
+
+
+Route::get('/produk', [ProdukController::class, 'show']);
+Route::get('/home', [HomeController::class, 'index']);
