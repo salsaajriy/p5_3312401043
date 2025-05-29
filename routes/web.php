@@ -17,8 +17,12 @@ Route::get('/loginadmin', function () {
 
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ListProdukController;
 
 
 
-Route::get('/produk', [ProdukController::class, 'show']);
+Route::get('/', [ProdukController::class, 'show']);
 Route::get('/home', [HomeController::class, 'index']);
+Route::get('/list_produk', [ListProdukController::class, 'show']);
+Route::post('/list_produk', [ListProdukController::class, 'simpan'])->name('produk.simpan');
+
